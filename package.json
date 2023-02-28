@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "The files responsible for handling requests on the backend for the project 'Gaalinator-9000'",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
