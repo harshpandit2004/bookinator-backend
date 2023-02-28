@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "The files responsible for handling requests on the backend for the project 'Gaalinator-9000'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OliverK",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshpandit2004/Gaalinator9000-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/harshpandit2004/Gaalinator9000-backend/issues"
+  },
+  "homepage": "https://github.com/harshpandit2004/Gaalinator9000-backend#readme"
+}
