@@ -4,6 +4,13 @@ const router = express.Router();
 const Schema = require("../models/Schema");
 
 router.get("/getbooklist", (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Headers", "*");
+  res.set(
+    "Access-Control-Allow-Methods",
+    "GET, POST, DELETE, UPDATE, PUT, PATCH"
+  );
+  
   Schema.find()
     .then((stuff) => {
       res.send(stuff);
