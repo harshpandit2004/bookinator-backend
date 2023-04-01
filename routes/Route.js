@@ -3,6 +3,16 @@ const router = express.Router();
 
 const Schema = require("../models/Schema");
 
+const corsOptions = {
+  origin: function (origin, callback) {
+    callback(null, true);
+  },
+
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 router.get("/getbooklist", (req, res) => {
   res.set("Access-Control-Allow-Origin", "*");
   res.set("Access-Control-Allow-Headers", "*");
@@ -10,7 +20,7 @@ router.get("/getbooklist", (req, res) => {
     "Access-Control-Allow-Methods",
     "GET, POST, DELETE, UPDATE, PUT, PATCH"
   );
-  
+
   Schema.find()
     .then((stuff) => {
       res.send(stuff);
@@ -30,7 +40,7 @@ router.post("/addbook", (req, res) => {
 
   const { genre, name, author, coverimg, pirate_link, summary } = req.body;
 
-  if (!genre && !name) {
+  if (!author && !name) {
     return res
       .status(422)
       .json({ error: "insufficient data, please add all the feilds." });
