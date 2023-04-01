@@ -1,17 +1,11 @@
 const express = require("express");
 const router = express.Router();
+const app = express();
+const cors = require("cors");
 
 const Schema = require("../models/Schema");
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    callback(null, true);
-  },
-
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
+app.use(cors())
 
 router.get("/getbooklist", (req, res) => {
   res.set("Access-Control-Allow-Origin", "*");

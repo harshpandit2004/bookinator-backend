@@ -13,11 +13,7 @@ app.use(require("./routes/Route"));
 
 //cors block so as to not fuck up in the future
 
-const corsOptions = {
-  origin: true,
-  credentials: true,
-};
-app.options("*", cors(corsOptions));
+app.use(cors())
 
 //mongo db block
 
