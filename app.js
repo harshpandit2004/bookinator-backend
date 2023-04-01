@@ -26,7 +26,7 @@ mongoose.connection.on("error", (error) => {
 });
 
 mongoose.set('strictQuery', true);
-mongoose.connect(Config.MONGOURI);
+mongoose.connect(port.MONGOURI);
 
 //node boilerplate
 
