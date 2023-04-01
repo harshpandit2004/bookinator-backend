@@ -25,6 +25,9 @@ mongoose.connection.on("error", (error) => {
   console.log(error);
 });
 
+mongoose.set('strictQuery', true);
+mongoose.connect(Config.MONGOURI);
+
 //node boilerplate
 
 app.get("/", (req, res) => {
