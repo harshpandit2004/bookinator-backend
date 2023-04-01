@@ -26,6 +26,18 @@ mongoose.connection.on("error", (error) => {
   console.log(error);
 });
 
+app.set(
+  "Access-Control-Allow-Origin",
+  "GET, POST, DELETE, UPDATE, PUT, PATCH"
+);
+app.set(
+  "Access-Control-Allow-Headers",
+  "GET, POST, DELETE, UPDATE, PUT, PATCH"
+);
+app.set(
+  "Access-Control-Allow-Methods",
+  "GET, POST, DELETE, UPDATE, PUT, PATCH"
+);
 
 //node boilerplate
 
