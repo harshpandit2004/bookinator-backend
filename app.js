@@ -17,6 +17,7 @@ app.use(cors())
 
 //mongo db block
 
+mongoose.set('strictQuery', true);
 mongoose.connect(MONGOURI);
 mongoose.connection.on("connected", () => {
   console.log("DB connected.");
@@ -25,8 +26,6 @@ mongoose.connection.on("error", (error) => {
   console.log(error);
 });
 
-mongoose.set('strictQuery', true);
-mongoose.connect(port.MONGOURI);
 
 //node boilerplate
 
