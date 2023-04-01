@@ -1,15 +1,17 @@
 const express = require("express");
 const router = express.Router();
-const app = express();
-const cors = require("cors");
 
 const Schema = require("../models/Schema");
 
-app.use(cors())
-
 router.get("/getbooklist", (req, res) => {
-  res.set("Access-Control-Allow-Origin", "*");
-  res.set("Access-Control-Allow-Headers", "*");
+  res.set(
+    "Access-Control-Allow-Origin",
+    "GET, POST, DELETE, UPDATE, PUT, PATCH"
+  );
+  res.set(
+    "Access-Control-Allow-Headers",
+    "GET, POST, DELETE, UPDATE, PUT, PATCH"
+  );
   res.set(
     "Access-Control-Allow-Methods",
     "GET, POST, DELETE, UPDATE, PUT, PATCH"
@@ -25,8 +27,14 @@ router.get("/getbooklist", (req, res) => {
 });
 
 router.post("/addbook", (req, res) => {
-  res.set("Access-Control-Allow-Origin", "*");
-  res.set("Access-Control-Allow-Headers", "*");
+  res.set(
+    "Access-Control-Allow-Origin",
+    "GET, POST, DELETE, UPDATE, PUT, PATCH"
+  );
+  res.set(
+    "Access-Control-Allow-Headers",
+    "GET, POST, DELETE, UPDATE, PUT, PATCH"
+  );
   res.set(
     "Access-Control-Allow-Methods",
     "GET, POST, DELETE, UPDATE, PUT, PATCH"
