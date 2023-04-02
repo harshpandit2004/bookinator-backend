@@ -10,12 +10,6 @@ require("./models/Schema");
 app.use(express.json());
 
 //cors block so as to not fuck up in the future
-
-const corsOptions = {
-  origin: true,
-  credentials: true,
-};
-app.options("*", cors(corsOptions));
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
