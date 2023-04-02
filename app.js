@@ -56,7 +56,8 @@ app.get("/getbooklist", (req, res) => {
 
 app.post("/addbook", (req, res) => {
   const { genre, name, author, coverimg, pirate_link, summary } = req.body;
-
+  res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   if (!author && !name) {
     return res
       .status(422)
