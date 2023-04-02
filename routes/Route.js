@@ -4,18 +4,9 @@ const router = express.Router();
 const Schema = require("../models/Schema");
 
 router.get("/getbooklist", (req, res) => {
-  res.set(
-    "Access-Control-Allow-Origin",
-    "GET, POST, DELETE, UPDATE, PUT, PATCH"
-  );
-  res.set(
-    "Access-Control-Allow-Headers",
-    "GET, POST, DELETE, UPDATE, PUT, PATCH"
-  );
-  res.set(
-    "Access-Control-Allow-Methods",
-    "GET, POST, DELETE, UPDATE, PUT, PATCH"
-  );
+  res.set("Access-Control-Allow-Origin", "GET");
+  res.set("Access-Control-Allow-Headers", "GET");
+  res.set("Access-Control-Allow-Methods", "GET");
 
   Schema.find()
     .then((stuff) => {
@@ -27,18 +18,9 @@ router.get("/getbooklist", (req, res) => {
 });
 
 router.post("/addbook", (req, res) => {
-  res.set(
-    "Access-Control-Allow-Origin",
-    "GET, POST, DELETE, UPDATE, PUT, PATCH"
-  );
-  res.set(
-    "Access-Control-Allow-Headers",
-    "GET, POST, DELETE, UPDATE, PUT, PATCH"
-  );
-  res.set(
-    "Access-Control-Allow-Methods",
-    "GET, POST, DELETE, UPDATE, PUT, PATCH"
-  );
+  res.set("Access-Control-Allow-Origin", "POST");
+  res.set("Access-Control-Allow-Headers", "POST");
+  res.set("Access-Control-Allow-Methods", "POST");
 
   const { genre, name, author, coverimg, pirate_link, summary } = req.body;
 
